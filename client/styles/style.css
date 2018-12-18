@@ -1,8 +1,38 @@
-.profile-pic {
-  width: 20px;
+body {
+  background-color: grey;
 }
 
-.tester {
-  font-size: 50px;
-  color: green;
+.greeting {
+  display: flex;
+  margin: 5% 5% 5% 5%;
+  -webkit-transition: fadein 2s;
+  -moz-transition: fadein 2s;
+  -o-transition: fadein 2s;
+  -ms-transition: fadein 2s;
+  transition: fadein 2s;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 5%;
+}
+
+.greeting-text {
+  font-family: sans-serif;
+  font-weight: 100;
+  margin-top: 5%;
+  line-height: 25px; 
+}
+.aboutme-header {
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: black;
+  margin-bottom: 3%;
+}
+.aboutme-text {
+  font-family: sans-serif;
+  font-weight: 100;
 }
