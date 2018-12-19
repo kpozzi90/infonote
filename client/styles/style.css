@@ -25,14 +25,64 @@ body {
   margin-top: 5%;
   line-height: 25px; 
 }
+
 .aboutme-header {
   text-align: center;
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: black;
   margin-bottom: 3%;
+  font-family: sans-serif;
 }
+
 .aboutme-text {
   font-family: sans-serif;
   font-weight: 100;
+  line-height: 20px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: 100;
+  line-height: 20px;
+}
+
+.front-end-skills, .back-end-skills {
+  margin: 2em 3em 0 3em;
+}
+
+.front-end-skills-list, .back-end-skills-list {
+  margin: .5em 0 0 1em;
+  padding: 0;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em auto 0 auto;
+  width: 88%;
+  max-width: 800px;
+}
+
+.project {
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity .3s ease;
+}
+
+.project:hover .overlay {
+  opacity: 1;
 }
