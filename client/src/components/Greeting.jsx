@@ -10,4 +10,4 @@ const Greeting = () => {
   )
 }
 
-module.exports.Greeting = Greeting;
+export default Greeting;

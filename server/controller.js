@@ -10,12 +10,13 @@ const transporter = nodemailer.createTransport({
 });
 
 const controller = {
+
   sendEmail: (req, res) => {
     const mailOptions = {
       from: emailInfo.email,
       to: 'kevindavidpozzi@gmail.com',
-      subject: 'Sending Email using Node.js',
-      text: 'That was easy!'
+      subject: `email from ${req.body.name} at ${req.body.email}`,
+      text: req.body.message
     };
     
     transporter.sendMail(mailOptions, function(error, info){
@@ -26,8 +27,9 @@ const controller = {
       }
     });
 
-    res.send('in get');
+    res.status(200).send('sent!');
   }
+
 }
 
 module.exports = controller

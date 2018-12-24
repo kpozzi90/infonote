@@ -1,6 +1,6 @@
 import React from 'React';
 import '../../styles/style.css';
-import {Skills} from './Skills.jsx';
+import Skills from './Skills.jsx';
 
 const AboutMe = () => {
   return (
@@ -12,4 +12,4 @@ const AboutMe = () => {
   )
 }
 
-module.exports.AboutMe = AboutMe;
+export default AboutMe;

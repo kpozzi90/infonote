@@ -28,4 +28,4 @@ const Skills = () => {
   )
 }
 
-module.exports.Skills = Skills;
+export default Skills;
