@@ -1,20 +1,21 @@
 import React from 'React';
 import '../../styles/style.css';
+import {projectData} from '../../projectData';
 
 class Projects extends React.Component  {
   constructor() {
     super();
     this.state = {
-      project: 1,
+      project: 0,
     }
     this.moveRight = this.moveRight.bind(this);
     this.moveLeft = this.moveLeft.bind(this);
   }
 
   moveRight() {
-    if (this.state.project === 3) {
+    if (this.state.project === projectData.length - 1) {
       this.setState ({
-        project: 1
+        project: 0
       })
     } else {
       let newProject = this.state.project + 1;
@@ -25,9 +26,9 @@ class Projects extends React.Component  {
   }
 
   moveLeft() {
-    if (this.state.project === 1) {
+    if (this.state.project === 0) {
       this.setState ({
-        project: 3
+        project: projectData.length - 1,
       })
     } else {
       let newProject = this.state.project - 1;
@@ -41,20 +42,14 @@ class Projects extends React.Component  {
     return (
       <div className = 'projects'>
         <button className = 'back-button' onClick = {() => this.moveLeft()}>
-          <img src = 'https://i.imgur.com/UZsYrDa.png'/>
+          <img src = 'https://i.imgur.com/t0EX42q.png?1'/>
         </button>
-        {this.state.project === 1 ? 
-        <div className = 'project'>project one</div> 
-        :
-        this.state.project === 2 ? 
-        <div className = 'project'>project two</div>
-        :
         <div className = 'project'>
-          <img src = 'http://clipart-library.com/images/riLo855eT.png' />
-          <div className = 'overlay'>fuck yeah baby</div>
-        </div>}
+          <img src = {projectData[this.state.project].image} />
+          <div className = 'overlay'>{projectData[this.state.project].description}</div>
+        </div>
         <button className = 'next-button' onClick = {() => this.moveRight()}>
-            <img src = 'https://i.imgur.com/q0G8sDq.png'/>
+            <img src = 'https://i.imgur.com/LezWzql.png'/>
         </button>
       </div>
     )

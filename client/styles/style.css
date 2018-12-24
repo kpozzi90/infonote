@@ -86,3 +86,9 @@ body {
 .project:hover .overlay {
   opacity: 1;
 }
+
+.next-button, .back-button {
+  background-color: black;
+  opacity: .4;
+  border: none;
+}
