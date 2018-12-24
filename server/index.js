@@ -8,6 +8,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.use('/infonote/', router);
+app.use('/kevinpozzi/', router);
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

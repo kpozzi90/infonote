@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require('./controller.js')
 
 router
-  .route('/test')
-  .get(controller.getFunction)
+  .route('/email')
+  .post(controller.sendEmail)
 
 module.exports = router;

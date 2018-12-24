@@ -45,7 +45,7 @@ class Projects extends React.Component  {
           <img src = 'https://i.imgur.com/t0EX42q.png?1'/>
         </button>
         <div className = 'project'>
-          <img src = {projectData[this.state.project].image} />
+          <img className = 'project-image' src = {projectData[this.state.project].image} />
           <div className = 'overlay'>{projectData[this.state.project].description}</div>
         </div>
         <button className = 'next-button' onClick = {() => this.moveRight()}>
